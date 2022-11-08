@@ -1,3 +1,5 @@
+package com.ironhack.w1d1;
+
 import java.io.*;
 import java.lang.*;
 import java.util.*;
