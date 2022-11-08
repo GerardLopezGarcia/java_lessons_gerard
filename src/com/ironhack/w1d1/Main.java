@@ -13,9 +13,10 @@ public class Main {
             input[i] = input[i] * input[i+1];
         }
         System.out.println(Arrays.toString(input));
+
 */      int counter = 0;
         int[] output = new int[input.length];
-        //es lia si no creo una nova llista
+
         for(int i = input.length-1;i >= 0 ;i--){
             output[i]= input[counter];
             counter = counter +1;
