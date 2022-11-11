@@ -1,10 +1,11 @@
-package com.ironhack.w1d1;
+package com.ironhack.interfaces_and_abstract_classes;
 
 import java.util.ArrayList;
+import java.util.Date;
 
-public interface TransactionList {
+public interface ItransactionList {
     Transaction getLastTransaction();
     void addTransaction(Transaction transaction);
-    Transaction getTransactionByDate(int date);
+    Transaction getTransactionByDate(Date date);
     ArrayList<Transaction> getAllTransaction();
 }

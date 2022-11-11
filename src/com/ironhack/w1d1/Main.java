@@ -61,6 +61,7 @@ public class Main {
     }
 }
 */
+// Scanner and Files ---------------------------
 /*
 import java.io.File;
 import java.io.FileWriter;
@@ -93,44 +94,47 @@ public class Main {
 }
 
  */
+/*
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-//public class Main {
-//    public static void main(String[] args) {
-//
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Inster your age ");
-//        Integer age = scanner.nextInt();
-//        String stringAge = Integer.toString(age);
-//        char ch = stringAge.charAt(0);
-//        int ascii = (int) ch;
-//        System.out.println(ascii);
-//        boolean access = false;
-//
-//        do {
-//            if (Pattern.matches("\\d+",stringAge)){
-//                System.out.println("integer");
-//                access=true;
-//            }else {
-//                System.out.println("not an integer");
-//                access=false;
-//                System.out.println("Inster your age ");
-//                age = scanner.nextInt();
-//
-//            }
-//        }
-//        while(!access);
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        String age;
 
 
+        boolean access;
 
-//    }
-//}
+        do {
+                System.out.println("Inster your age ");
+                age = scanner.nextLine();
+                access = true;
 
+                char[] array = new char[age.length()];
+                age.getChars(0,age.length(),array,0);
 
+            for (char c : array) {
+                int ascii = c;
+                if(ascii < 47 || ascii > 58) {
+                    access = false;
+                    break;
+                }
+            }
+        }
+        while(!access);
+
+        System.out.println("congrats you entered");
+
+    }
+}
+
+*/
 
 // Classes ---------------------------
 /*
@@ -145,11 +149,35 @@ public class Main {
 
 
  */
-
+/*
 //Interfaces and Abstract Classes----------------
-
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 public class Main{
+    public static void main(String[] args) {
+        BigDecimal a =new BigDecimal(".5");
+        BigDecimal b = new BigDecimal(".034");
+        BigDecimal add = a.add(b);
+        BigDecimal subs = a.subtract(b);
+        BigDecimal mult = a.multiply(b);
+        BigDecimal divide = a.divide(b,RoundingMode.DOWN);
+
+        BigDecimal result = divide.setScale(4,RoundingMode.UP);
+
+        BigDecimal x = new BigDecimal(2);
+        BigDecimal i = x.multiply(new BigDecimal("2.3")).add(new BigDecimal("1.5"));
+        BigDecimal j = x.subtract(new BigDecimal(".8"));
+        BigDecimal res = i.divide(j,RoundingMode.HALF_EVEN);
+        System.out.println(res);
+    }
+}
+*/
+
+import java.util.Arrays;
+
+public class Main {
     public static void main(String[] args) {
 
     }
+
 }
